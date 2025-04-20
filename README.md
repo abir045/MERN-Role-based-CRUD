@@ -41,6 +41,10 @@ MERN-Role-based-CRUD/
 
 - MongoDB (Atlas)
 
+## Download the project
+
+`git clone https://github.com/abir045/MERN-Role-based-CRUD.git`
+
 🛠️ Backend Setup
 
 - Navigate to the backend directory:
