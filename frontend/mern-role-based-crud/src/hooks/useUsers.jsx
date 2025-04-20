@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 const useUsers = () => {
   const axiosPublic = useAxiosPublic();
 
-  const { data: usersData = [] } = useQuery({
+  const { data: usersData = [], refetch } = useQuery({
     queryKey: ["users"],
     queryFn: async () => {
       const res = await axiosPublic.get("/users");
@@ -13,7 +13,7 @@ const useUsers = () => {
     },
   });
 
-  return [usersData];
+  return [usersData, refetch];
 };
 
 export default useUsers;
