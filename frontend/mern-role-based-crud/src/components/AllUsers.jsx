@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import useUsers from "../hooks/useUsers";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import useAxiosSecure from "../hooks/useAxiosSecure";
 
 const AllUsers = () => {
   const [usersData, refetch] = useUsers();
   const [editingUser, setEditingUser] = useState(null);
   const [updatedRole, setUpdatedRole] = useState("");
   const axiosPublic = useAxiosPublic();
+  const axiosSecure = useAxiosSecure();
 
   const handleEditClick = (user) => {
     setEditingUser(user);
@@ -21,9 +23,10 @@ const AllUsers = () => {
   const handleRoleChange = (e) => {
     setUpdatedRole(e.target.value);
   };
+
   const handleUpdateRole = async (userId) => {
     try {
-      const response = await axiosPublic.patch(`/api/users/${userId}`, {
+      const response = await axiosSecure.patch(`/api/users/${userId}`, {
         role: updatedRole,
       });
 
