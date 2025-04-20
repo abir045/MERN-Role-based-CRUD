@@ -26,6 +26,16 @@ async function run() {
 
     const userCollection = client.db("mern-crud").collection("users");
 
+    //jwt related api
+
+    app.post("/jwt", async (req, res) => {
+      const user = req.body;
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: "2m",
+      });
+      res.send({ token });
+    });
+
     //users related api
 
     app.post("/api/register", async (req, res) => {
