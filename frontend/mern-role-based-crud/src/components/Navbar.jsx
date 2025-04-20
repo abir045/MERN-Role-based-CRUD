@@ -26,6 +26,10 @@ const Navbar = () => {
           <li>
             <span>{user.email}</span>
           </li>
+
+          <li>
+            <Link to={"/users"}>Users</Link>
+          </li>
         </>
       ) : (
         <li>

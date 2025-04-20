@@ -9,7 +9,7 @@ const useAdmin = () => {
 
   const { data: isAdmin, isPending: isAdminLoading } = useQuery({
     queryKey: [user?.email, "isAdmin"],
-    enabled: !loading && !!user?.email,
+    // enabled: !loading && !!user?.email,
     queryFn: async () => {
       console.log("checking admin", user);
       const res = await axiosPublic.get(`/users/checkAdmin/${user?.email}`);
