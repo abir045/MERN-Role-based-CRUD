@@ -1,5 +1,6 @@
-MERN Role-Based CRUD
-A full-stack MERN (MongoDB, Express, React, Node.js) application implementing role-based access control (RBAC) with CRUD operations. This project allows user registration, authentication, and role management with permissions for roles such as Admin, Super Admin, Manager, Employee, and Staff.
+# MERN Role-Based CRUD
+
+- A full-stack MERN (MongoDB, Express, React, Node.js) application implementing role-based access control (RBAC) with CRUD operations. This project allows user registration, authentication, and role management with permissions for roles such as Admin, Super Admin, Manager, Employee, and Staff.
 
 🚀 Features
 User registration and login with JWT authentication
