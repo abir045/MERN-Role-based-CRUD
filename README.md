@@ -106,11 +106,12 @@ Login:
 
 Use the registered credentials to log in. A JWT token will be stored in localStorage.
 
-Admin credentials
+## Admin credentials
+
 email: abir_imran@gmail.com
 pass: 123456
 
-Access protected routes:
+- Access protected routes:
 
 Depending on the user's role, access to certain routes and functionalities will be granted or restricted.
 
