@@ -3,22 +3,22 @@
 - A full-stack MERN (MongoDB, Express, React, Node.js) application implementing role-based access control (RBAC) with CRUD operations. This project allows user registration, authentication, and role management with permissions for roles such as Admin, Super Admin, Manager, Employee, and Staff.
 
 🚀 Features
-User registration and login with JWT authentication
 
-Role-based access control (RBAC) for secure route protection
+- User registration and login with JWT authentication
 
-Admin and Super Admin can manage user roles
+- Role-based access control (RBAC) for secure route protection
 
-CRUD operations for user management
+- Admin and Super Admin can manage user roles
 
-React frontend with dynamic role-based UI rendering
+- CRUD operations for user management
 
-MongoDB for data persistence
+- React frontend with dynamic role-based UI rendering
+
+- MongoDB for data persistence
 
 🗂️ Project Structure
-bash
-Copy
-Edit
+
+```
 MERN-Role-based-CRUD/
 ├── backend/ # Express server and API routes
 │ ├── index.js # Main server file
@@ -29,52 +29,60 @@ MERN-Role-based-CRUD/
 │ ├── pages/ # React pages (e.g., AllUsers)
 │ ├── hooks/ # Custom React hooks (e.g., useUsers, useAxiosPublic)
 │ └── ... # Other frontend files and folders
+```
+
 ⚙️ Prerequisites
-Ensure you have the following installed on your machine:
 
-Node.js (v14 or higher)
+- Ensure you have the following installed on your machine:
 
-npm or yarn
+- Node.js (v14 or higher)
 
-MongoDB (Atlas)
+- npm or yarn
+
+- MongoDB (Atlas)
 
 🛠️ Backend Setup
-Navigate to the backend directory:
 
-cd backend
+- Navigate to the backend directory:
+
+`cd backend`
 Install dependencies:
 
-npm install
-Configure environment variables:
+`npm install`
 
-Create a .env file in the backend directory with the following content:
+- Configure environment variables:
+
+- Create a .env file in the backend directory with the following content:
 
 DB_USER=your_mongodb_username
 DB_PASS=your_mongodb_password
 ACCESS_TOKEN_SECRET=your_jwt_secret_key
 Replace your_mongodb_username, your_mongodb_password, and your_jwt_secret_key with your actual MongoDB credentials and a secure JWT secret key.
 
-Start the backend server:
+- Start the backend server:
 
-nodemon index.js
+`nodemon index.js`
 The server should now be running at http://localhost:5000.
 
 🌐 Frontend Setup
-Navigate to the frontend directory:
 
-cd frontend/mern-role-based-crud
-Install dependencies:
+- Navigate to the frontend directory:
 
-npm install
+`cd frontend/mern-role-based-crud`
+
+- Install dependencies:
+
+`npm install`
 Start the frontend development server:
 
-npm start
+`npm start`
 The React application should now be running at http://localhost:3000.
 
 🔐 Authentication & Authorization
-JWT Authentication: Users receive a JWT upon successful login, which is stored in localStorage and included in the Authorization header for protected routes.
 
-Role-Based Access Control (RBAC): Middleware functions on the backend verify user roles to control access to specific routes. For example, only users with the roles "Admin" or "Super Admin" can edit other users' roles.
+- JWT Authentication: Users receive a JWT upon successful login, which is stored in localStorage and included in the Authorization header for protected routes.
+
+- Role-Based Access Control (RBAC): Middleware functions on the backend verify user roles to control access to specific routes. For example, only users with the roles "Admin" or "Super Admin" can edit other users' roles.
 
 📬 API Endpoints
 POST /jwt: Generate JWT token upon login
