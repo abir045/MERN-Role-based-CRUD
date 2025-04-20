@@ -43,7 +43,7 @@ const Login = () => {
     <div className="flex flex-col items-center ">
       <h1 className="text-center font-bold text-3xl mt-10">Login Now</h1>
 
-      <form onSubmit={handleLogin} className="max-w-3xl w-full mx-auto">
+      <form onSubmit={handleLogin} className="max-w-2xl px-5 w-full mx-auto ">
         <fieldset className="fieldset mt-4">
           <legend className="fieldset-legend">Email</legend>
           <input
